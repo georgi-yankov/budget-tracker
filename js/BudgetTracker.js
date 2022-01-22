@@ -109,6 +109,7 @@ export default class BudgetTracker {
         this.updateSummary();
     }
 
+    // Adds a new entry inside the table
     addEntry(entry = {}) {
         this.root.querySelector(".entries").insertAdjacentHTML("beforeend", BudgetTracker.entryHtml());
 
@@ -127,6 +128,7 @@ export default class BudgetTracker {
         });
     }
 
+    // Returns all of the active rows (all of the rows inside the table)
     getEntryRows() {
         return Array.from(this.root.querySelectorAll(".entries tr"));
     }
